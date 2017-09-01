@@ -6,11 +6,12 @@
 export const environment = {
   production: false,
   config : {
-    apiKey: "AIzaSyDCSVVE4Oy0lGN62PKKd0UL3Hw8zoD3WAw",
-    authDomain: "sa44-nodejs.firebaseapp.com",
-    databaseURL: "https://sa44-nodejs.firebaseio.com",
-    projectId: "sa44-nodejs",
-    storageBucket: "gs://sa44-nodejs.appspot.com",
-    messagingSenderId: "853122965557"
+    apiKey: "AIzaSyAgF0myC1UIc_i2SpDfdGsItw6G9lYVvME",
+    authDomain: "nodeworkshopbyleo.firebaseapp.com",
+    databaseURL: "https://nodeworkshopbyleo.firebaseio.com",
+    projectId: "nodeworkshopbyleo",
+    storageBucket: "nodeworkshopbyleo.appspot.com",
+    messagingSenderId: "535623409446"
+
   },
 };

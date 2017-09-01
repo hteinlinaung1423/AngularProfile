@@ -37,7 +37,7 @@ export class CreatePageComponent implements OnInit, OnDestroy {
         .then(data => {
           console.log("hasProfile", data);
           this.isEditing = data.hasProfile;
-          
+
           if (data.hasProfile) {
             this.databaseService.getProfile(data.profileKey)
               .then(data => {
@@ -47,7 +47,7 @@ export class CreatePageComponent implements OnInit, OnDestroy {
 
         })
     })
- 
+
   }
   ngOnDestroy(): void {
     this.authSub.unsubscribe();
@@ -56,7 +56,7 @@ export class CreatePageComponent implements OnInit, OnDestroy {
   birthdateChange(newStr) {
     this.birthdateString = newStr;
     this.model.birthdate = new Date(newStr).valueOf();
-    
+
     // console.log(this.model.birthdate);
   }
 
@@ -73,7 +73,6 @@ export class CreatePageComponent implements OnInit, OnDestroy {
     // console.log(files);
     this.currentPhoto = files[0];
     console.log(files[0].type);
-    
   }
 
   formSubmit(event) {
@@ -92,11 +91,11 @@ export class CreatePageComponent implements OnInit, OnDestroy {
       alert("Please give a profile photo!");
       return;
     }
-  
+
     let photo = this.currentPhoto;
     console.log(photo);
     console.log(this.model);
-    
+
     this.storageService.uploadFile(this.model.email, photo)
       .then(({filename, downloadUrl}) => {
         this.model.photoUrl = downloadUrl;
